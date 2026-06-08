@@ -1,0 +1,44 @@
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+  padding-bottom: 8px !important;
+}
+
+/* Animated underline — collapsed at center by default */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #212529;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              right 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.25s ease;
+}
+
+/* Expand underline on hover */
+.nav-link:hover::after {
+  left: 0.75rem;
+  right: 0.75rem;
+}
+
+/* Expand underline fully when active */
+.nav-link.text-dark::after {
+  left: 0.75rem;
+  right: 0.75rem;
+  background-color: #212529;
+}
+
+/* Override Bootstrap text color on hover */
+.nav-link:hover {
+  color: #212529 !important;
+}
+
+/* Subtle press effect on click */
+.nav-link:active {
+  transform: scale(0.94);
+  transition: transform 0.1s ease, color 0.25s ease;
+}

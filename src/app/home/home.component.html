@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg shadow border m-1 p-3 d-flex flex-column justify-content-center">
+      <div class="text-center d-flex flex-column align-items-center justify-content-around gap-3">
+        <h2>About Me</h2>
+        <img
+          src="../../assets/Me.png"
+          alt="prof-pic"
+          width="256"
+          height="256"
+          class="rounded-circle border"
+        />
+        <p style="text-align: justify;">
+          I’m a frontend-focused web developer with over 4 years of experience
+          building responsive and user-friendly interfaces. I mainly work with
+          React and Angular, and I use Laravel when backend support is needed. I
+          care about making apps feel smooth, fast, and intuitive—not just
+          functional. I enjoy refining UI details and solving the small things
+          users actually notice.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg shadow border m-1 p-2">
+      <div class="text-center">
+        <h2>Latest Project</h2>
+        <br>
+        <h4>{{ featuredProject.name }}</h4>
+      </div>
+
+      <carousel>
+        <div *ngFor="let img of featuredProject.images">
+          <slide
+            ><img
+              src="{{ img }}"
+              alt="slide1"
+              style="display: block; width: 100%; height: 275px;"
+          /></slide>
+        </div>
+      </carousel>
+
+      <p class="mt-2">{{ featuredProject.summary }}</p>
+      <br>
+      <p>Visit the Portfolio section for more projects.</p>
+    </div>
+  </div>
+</div>
