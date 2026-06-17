@@ -3,8 +3,9 @@ export interface Project {
     name: string;
     summary: string;
     description: string;
-    projectLink: string;
+    projectLink?: string;
     images: string[];
     tags:string[];
+    type?: string;
 
 }

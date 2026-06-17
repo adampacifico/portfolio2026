@@ -1,7 +1,19 @@
 <div class="container">
     <div class="row">
-        <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-4" style="max-width: 380px; min-width: 380px;">
-            <app-project-card [project]="project"></app-project-card>
+        <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-4"
+            style="max-width: 380px; min-width: 380px;">
+            <div *ngIf="project.type === '1'">
+                <app-project-card [project]="project"></app-project-card>
+            </div>
         </div>
+    </div>
+    <div class="row">
+        <h2 class="text-center mb-4">Practice Projects</h2>
+        <ng-container *ngFor="let project of projects">
+            <div *ngIf="project.type === '0'" class="col-lg-4 col-md-6 mb-4"
+                style="max-width: 380px; min-width: 380px;">
+                <app-project-card [project]="project"></app-project-card>
+            </div>
+        </ng-container>
     </div>
 </div>

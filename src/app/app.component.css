@@ -1,3 +1,9 @@
-/* .route-wrapper {
-  overflow: scroll;
-} */
+.route-wrapper {
+  overflow-y: scroll;
+}
+.container-main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

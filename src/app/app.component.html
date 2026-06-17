@@ -1,7 +1,9 @@
-<div class="shadow-sm">
-    <app-header></app-header>
-    <app-nav></app-nav>
-</div>
-<div class="route-wrapper" [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
+<div class="container-main">
+    <div>
+        <app-header></app-header>
+        <app-nav></app-nav>
+    </div>
+    <div class="route-wrapper" [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
 </div>
