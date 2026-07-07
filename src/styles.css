@@ -1,4 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-bg: #f8fafc;
+    --color-card: #ffffff;
+    --color-primary: #0d6efd;
+    --color-accent: #0ea5e9;
+    --color-text: #0f172a;
+    --color-secondary: #64748b;
+    --color-border: #dbe3ef;
+    --color-text-on-primary: #f8fafc;
+}
+
+body.theme-dark {
+    --color-bg: #0f172a;
+    --color-card: #1e293b;
+    --color-primary: #3b82f6;
+    --color-accent: #22d3ee;
+    --color-text: #f8fafc;
+    --color-secondary: #cbd5e1;
+    --color-border: #334155;
+    --color-text-on-primary: #f8fafc;
+}
+
+html,
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+.card,
+.list-group-item,
+.modal-content,
+.accordion .card,
+.accordion-group .card,
+.container .border {
+    background-color: var(--color-card);
+    color: var(--color-text);
+}
+
+.border,
+.border-bottom,
+.list-group-item,
+.card,
+.modal-content {
+    border-color: var(--color-border) !important;
+}
+
+.text-secondary,
+.text-muted {
+    color: var(--color-secondary) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.05);
+}
+
 .container{
     max-width: 1140px;
 }

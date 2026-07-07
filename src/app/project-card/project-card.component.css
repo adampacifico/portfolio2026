@@ -1,10 +1,26 @@
-.tag{
-    padding: 0 20px;
-    height: 30px;
-    width: fit-content;
-    font-size: 14px;
-    line-height: 30px;
-    border-radius: 5px;
-    background-color: blue;
-    color: white;
+/* .tag {
+  padding: 0 20px;
+  height: 30px;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+} */
+.tag {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.bg-pink {
+  background-color: #d63384;
 }

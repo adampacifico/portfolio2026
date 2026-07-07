@@ -6,17 +6,18 @@
 
 /* Animated underline — collapsed at center by default */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 2px;
   left: 50%;
   right: 50%;
   height: 2px;
   border-radius: 2px;
-  background-color: #212529;
-  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              right 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              background-color 0.25s ease;
+  background-color: var(--color-accent);
+  transition:
+    left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    right 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s ease;
 }
 
 /* Expand underline on hover */
@@ -26,19 +27,42 @@
 }
 
 /* Expand underline fully when active */
-.nav-link.text-dark::after {
+.nav-link.nav-link-active::after {
   left: 0.75rem;
   right: 0.75rem;
-  background-color: #212529;
+  background-color: var(--color-accent);
 }
 
 /* Override Bootstrap text color on hover */
 .nav-link:hover {
-  color: #212529 !important;
+  color: var(--color-text) !important;
+}
+
+.nav-link.nav-link-active {
+  color: var(--color-text) !important;
 }
 
 /* Subtle press effect on click */
 .nav-link:active {
   transform: scale(0.94);
-  transition: transform 0.1s ease, color 0.25s ease;
+  transition:
+    transform 0.1s ease,
+    color 0.25s ease;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 425px) {
+  .nav {
+    gap: 0.5rem !important;
+  }
+  .nav-item {
+    font-size: 1rem;
+    padding: 0.75rem 0 !important;
+  }
+  .nav-link{
+    padding: 0.25rem !important;
+  }
 }

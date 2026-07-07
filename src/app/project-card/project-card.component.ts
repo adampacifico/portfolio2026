@@ -12,17 +12,48 @@ export class ProjectCardComponent {
   @Input() project = {} as Project;
   bsModalRef?: BsModalRef;
 
-  constructor(private modalService: BsModalService){
+  constructor(private modalService: BsModalService) {}
+  
+  getTagClass(tag: string): string {
+    const colors: { [key: string]: string } = {
+      // Frameworks
+      Angular: 'bg-danger',
+      REACT: 'bg-info',
+      Vue: 'bg-success',
+      Laravel: 'bg-danger',
+      PHP: 'bg-primary',
+      Django: 'bg-success',
 
+      // Languages
+      JavaScript: 'bg-warning text-dark',
+      TypeScript: 'bg-primary',
+      // PHP: 'bg-secondary',
+      'C#': 'bg-secondary',
+      Python: 'bg-warning text-dark',
+
+      // Styling
+      HTML: 'bg-danger',
+      HTML5: 'bg-danger',
+      CSS: 'bg-primary',
+      Bootstrap: 'bg-purple',
+      Tailwind: 'bg-info text-dark',
+      SCSS: 'bg-pink',
+      Firebase: 'bg-warning text-dark',
+    };
+
+    return colors[tag] || 'bg-secondary';
   }
 
-  OpenProjectModal(){
+  OpenProjectModal() {
     const modalOptions: ModalOptions = {
-      class: "modal-lg ",
+      class: 'modal-lg ',
       initialState: {
-        project: this.project
-      }
-    }
-    this.bsModalRef = this.modalService.show(ProjectModalComponent, modalOptions);
+        project: this.project,
+      },
+    };
+    this.bsModalRef = this.modalService.show(
+      ProjectModalComponent,
+      modalOptions,
+    );
   }
 }

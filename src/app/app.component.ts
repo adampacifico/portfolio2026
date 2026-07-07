@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { trigger, transition, style, animate, query } from '@angular/animations';
 
@@ -20,8 +20,36 @@ import { trigger, transition, style, animate, query } from '@angular/animations'
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Portfolio2025';
+  isDarkMode = false;
+
+  private readonly darkThemeClass = 'theme-dark';
+  private readonly themeStorageKey = 'portfolio-theme';
+
+  ngOnInit(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const savedTheme = window.localStorage.getItem(this.themeStorageKey);
+    this.isDarkMode = savedTheme ? savedTheme === 'dark' : true;
+    this.applyTheme();
+  }
+
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    this.applyTheme();
+  }
+
+  private applyTheme(): void {
+    if (typeof document === 'undefined' || typeof window === 'undefined') {
+      return;
+    }
+
+    document.body.classList.toggle(this.darkThemeClass, this.isDarkMode);
+    window.localStorage.setItem(this.themeStorageKey, this.isDarkMode ? 'dark' : 'light');
+  }
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation'];

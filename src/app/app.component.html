@@ -7,3 +7,12 @@
         <router-outlet #outlet="outlet"></router-outlet>
     </div>
 </div>
+
+<button
+    class="theme-toggle-btn"
+    type="button"
+    (click)="toggleTheme()"
+    [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+>
+    {{ isDarkMode ? '☀️' : '🌙' }}
+</button>
