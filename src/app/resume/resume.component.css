@@ -1,5 +1,7 @@
 accordion-group::ng-deep .btn-link {
   color: var(--color-text-on-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 accordion-group::ng-deep .card-header {
   background-color: var(--color-primary);
