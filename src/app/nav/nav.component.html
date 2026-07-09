@@ -1,18 +1,37 @@
-<nav class="navbar-expand-md border-bottom mb-3">
+<nav class="navbar-expand-mdmb-3">
     <div class="container">
-        <ul class="nav justify-content-center gap-5">
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/home" routerLinkActive="nav-link-active">🏠 Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/portfolio" routerLinkActive="nav-link-active">🚀 Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/resume" routerLinkActive="nav-link-active">📄 Resume</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/contact" routerLinkActive="nav-link-active">✉️ Contact</a>
-            </li>
-        </ul>
+        <div class="glass-nav">
+            <ul class="nav justify-content-center gap-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="nav-link-active">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/portfolio" routerLinkActive="nav-link-active">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/resume" routerLinkActive="nav-link-active">
+                        <i class="bi bi-file-earmark-person-fill"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="nav-link-active">
+                        <i class="bi bi-envelope-paper-fill"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
     </div>
 </nav>

@@ -11,6 +11,38 @@ import { Project } from '../_models/project';
 export class HomeComponent implements OnInit{
 
   featuredProject = {} as Project;
+  qualifications = [
+    {
+      title: '4+ years of experience',
+      subtitle: 'Real World experience in building web applications and software solutions.',
+      icon: 'bi bi-calendar2-check',
+    },
+    {
+      title: 'Frontend Expertise',
+      subtitle: 'Proficient in Angular, React, Vue, and modern web technologies.',
+      icon: 'bi bi-code-slash',
+    },
+    {
+      title: 'Responsive Design',
+      subtitle: 'Ensures your applications look great on all devices.',
+      icon: 'bi bi-phone'
+    },
+    {
+      title: 'Backend Integration',
+      subtitle: 'Seamless integration with backend services and APIs.',
+      icon: 'bi bi-server'
+    },
+    {
+      title: 'Clean and Maintainable Code',
+      subtitle: 'Writes clean, maintainable, and well-structured code.',
+      icon: 'bi bi-file-earmark-code',
+    },
+    {
+      title: 'Fast Communication',
+      subtitle: 'Communicates effectively and promptly with team members and clients.',
+      icon: 'bi bi-chat-dots',
+    },
+  ]
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Adam Pacifico - Home')

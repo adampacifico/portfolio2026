@@ -1,31 +1,29 @@
 <div class="container">
-  <div class="row gap-3">
-    <div
-      class="col-lg shadow border m-1 p-3 d-flex flex-column justify-content-center"
-    >
-      <div
-        class="text-center d-flex flex-column align-items-center justify-content-around gap-3"
-      >
-        <h2>About Me</h2>
-        <img
-          src="../../assets/Me.png"
-          alt="prof-pic"
-          width="256"
-          height="256"
-          class="rounded-circle border"
-        />
+  <div class="row gap-3 border p-5">
+    <div class="col-lg m-1 p-3 d-flex flex-column justify-content-center">
+      <div class="text-center d-flex flex-column align-items-center justify-content-around gap-3">
+        <!-- <h2>About Me</h2> -->
+        <img src="../../assets/Me.png" alt="prof-pic" width="300" height="300" class="rounded-circle " style="border: 2px solid #25d7ff;"/>
         <p style="text-align: justify">
-          💻 I'm a frontend-focused web developer with 4+ years of experience
-          building responsive, modern, and user-friendly web applications. 🚀 I
-          specialize in React ⚛️ and Angular 🅰️, Vue js 🖖 and I use Laravel 🛠️ whenever
-          backend support is needed. I care about creating apps that feel
-          smooth, fast, and intuitive ⚡—not just functional. 🎨 I genuinely
-          enjoy refining UI details, improving user experience, and solving the
-          small things users actually notice. ✨
+          Web developer with 4+ years of experience. No rage quits—only solutions. I build modern websites,
+          overcome obstacles, and always finish the mission with quality results.
         </p>
       </div>
     </div>
-    <div class="col-lg shadow border m-1 p-2">
+    <div class="col-lg d-flex flex-column align-items-center justify-content-around gap-3">
+      <h2>Why choose me?</h2>
+      <div class="row">
+        <div *ngFor="let qualification of qualifications" class="col-md-6 d-flex align-items-center gap-3 mb-3">
+          <i class="{{ qualification.icon }} fs-2"></i>
+          <div class="d-flex flex-column">
+
+            <h6 style="color: #25d7ff; font-size: 1.2rem">{{ qualification.title }}</h6>
+            <p style="font-size: 0.9rem">{{ qualification.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-lg shadow border m-1 p-2">
       <div class="text-center">
         <h2>Latest Project</h2>
         <br />
@@ -47,6 +45,6 @@
       <p class="mt-2">{{ featuredProject.summary }}</p>
       <br />
       <a  class="fs-6" routerLink="/portfolio">Visit the Portfolio section for more projects.</a>
-    </div>
+    </div> -->
   </div>
 </div>
