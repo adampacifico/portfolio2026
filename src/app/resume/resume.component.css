@@ -50,3 +50,13 @@ accordion-group::ng-deep .card-header {
   margin-bottom: 4px;
   font-weight: 600;
 }
+
+.cert {
+  width: 80%;
+}
+
+@media (max-width: 425px) {
+  .cert {
+    width: 100%;
+  }
+}
