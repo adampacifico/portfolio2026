@@ -20,7 +20,7 @@
   <hr />
   <div class="d-flex flex-wrap">
     <div *ngFor="let tag of project.tags">
-      <div class="tag me-2 mb-1">{{ tag }}</div>
+      <div class="tag me-2 mb-1" [ngClass]="getTagClass(tag)">{{ tag }}</div>
     </div>
   </div>
 </div>
