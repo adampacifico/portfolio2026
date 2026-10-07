@@ -116,7 +116,7 @@ export class ProjectsService {
       order: '6',
       name: 'DOE-EPS',
       description:
-        'DOE-EPS (Department of Energy - Energy Performance System) is an online platform that allows users to monitor and manage energy performance data for various projects. A centralized, secure, and efficient electronic payment gateway for all DOE transactions.',
+        'DOE-EPS is designed to streamline the management of energy performance data and facilitate secure electronic transactions for the Department of Energy. From payor filling a billing statement, to the approval and processing of payments, the system ensures efficiency and transparency throughout the entire workflow. Though this portal, clients and stakeholders can easily submit payment requests, track transaction status, and manage payment-related activities anytime and anywhere.',
       projectLink: '',
       type: '1',
       tags: ['Vue', 'Laravel', 'Bootstrap'],
@@ -133,7 +133,7 @@ export class ProjectsService {
       ],
       is_ongoing: true,
       summary:
-        'Basically, DOE-EPS is designed to streamline the management of energy performance data and facilitate secure electronic transactions for the Department of Energy. From payor filling a billing statement, to the approval and processing of payments, the system ensures efficiency and transparency throughout the entire workflow. Though this portal, clients and stakeholders can easily submit payment requests, track transaction status, and manage payment-related activities anytime and anywhere.',
+        'DOE-EPS (Department of Energy - Energy Performance System) is an online platform that allows users to monitor and manage energy performance data for various projects. A centralized, secure, and efficient electronic payment gateway for all DOE transactions.',
     },
     {
       id: 6,
