@@ -8,6 +8,7 @@ export class ProjectsService {
   projects: Project[] = [
     {
       id: 0,
+      order: '5',
       name: 'DEPDEV PIMS',
       description:
         'DEPDEV Region VII PIMS is a Project Information Management System for the Department of Economy, Planning, and Development in Region VII of the Philippines, built with an Angular frontend and Django REST Framework backend on PostgreSQL. It streamlines government project tracking, proposals, monitoring (RPMES), reports, and planning workflows across agencies and divisions.',
@@ -27,6 +28,7 @@ export class ProjectsService {
     },
     {
       id: 1,
+      order: '4',
       name: 'UPLIMS',
       description:
         'UPLIMS is a Laravel-based Laboratory Information Management System (LIMS) for managing laboratory tests, equipment, billing, invoicing, and monitoring — built for a medical/clinical lab setting.',
@@ -44,6 +46,7 @@ export class ProjectsService {
     },
     {
       id: 2,
+      order: '3',
       name: 'ATI UNEXSYS',
       description:
         'A Laravel 8 web-based information system for the Agricultural Training Institute (ATI) that standardizes planning, monitoring, and evaluation of Agriculture and Fisheries Extension (AFE) services across ATI regional centers and partner agencies in the Philippines.',
@@ -61,6 +64,7 @@ export class ProjectsService {
     },
     {
       id: 4,
+      order: '2',
       name: 'EFilling',
       description:
         'The EFilling project is an electronic deposit insurance claim submission system for PDIC (Philippine Deposit Insurance Corporation). It walks depositors through a guided workflow — verifying their closed bank, entering personal and account details, selecting a payment option, uploading documents, and submitting their claim — all protected by route guards to enforce step order. The stack consists of an Angular 16 frontend (UI), an ASP.NET Core Web API backend (C#) handling business logic and email notifications, and an SSIS package that integrates submitted data with the main UICS system.',
@@ -84,6 +88,7 @@ export class ProjectsService {
     },
     {
       id: 5,
+      order: '1',
       name: 'EDIUF',
       description:
         'The EDIUF (Electronic Deposit Insurance Undertaking Form) project is a PDIC online portal that allows depositors to electronically file their deposit insurance claims against closed banks. Like EFilling, it guides users through a step-by-step workflow — verifying their bank, entering depositor and account details, selecting a payment option, uploading documents, and reviewing their claim — all enforced by route guards. The stack is identical: an Angular 16 frontend, an ASP.NET Core Web API (C#) backend with AutoMapper and a layered service architecture, and an SSIS integration package that syncs submitted data with the main UICS system.',
@@ -105,6 +110,30 @@ export class ProjectsService {
       ],
       summary:
         'The EDIUF (Electronic Deposit Insurance Undertaking Form) project is a PDIC online portal that allows depositors to electronically file their deposit insurance claims against closed banks. Like EFilling, it guides users through a step-by-step workflow — verifying their bank, entering depositor and account details, selecting a payment option, uploading documents, and reviewing their claim — all enforced by route guards. The stack is identical: an Angular 16 frontend, an ASP.NET Core Web API (C#) backend with AutoMapper and a layered service architecture, and an SSIS integration package that syncs submitted data with the main UICS system.',
+    },
+    {
+      id: 6,
+      order: '6',
+      name: 'DOE-EPS',
+      description:
+        'DOE-EPS (Department of Energy - Energy Performance System) is an online platform that allows users to monitor and manage energy performance data for various projects. A centralized, secure, and efficient electronic payment gateway for all DOE transactions.',
+      projectLink: '',
+      type: '1',
+      tags: ['Vue', 'Laravel', 'Bootstrap'],
+      // order: '5',
+      images: [
+        '../../assets/doe_1.png',
+        '../../assets/doe_2.png',
+        '../../assets/doe_3.png',
+        '../../assets/doe_4.png',
+        '../../assets/doe_5.png',
+        '../../assets/doe_6.png',
+        '../../assets/doe_7.png',
+        '../../assets/doe_8.png',
+      ],
+      is_ongoing: true,
+      summary:
+        'Basically, DOE-EPS is designed to streamline the management of energy performance data and facilitate secure electronic transactions for the Department of Energy. From payor filling a billing statement, to the approval and processing of payments, the system ensures efficiency and transparency throughout the entire workflow. Though this portal, clients and stakeholders can easily submit payment requests, track transaction status, and manage payment-related activities anytime and anywhere.',
     },
     {
       id: 6,

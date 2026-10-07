@@ -7,5 +7,7 @@ export interface Project {
     images: string[];
     tags:string[];
     type?: string;
+    order?: string;
+    is_ongoing?: boolean;
 
 }

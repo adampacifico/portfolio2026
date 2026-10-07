@@ -18,5 +18,10 @@ export class PortfolioComponent implements OnInit{
 
   ngOnInit(): void{
     this.projects = this.projectService.GetProjects();
+    this.projects = this.sortedProjects;
+    
   }
+  get sortedProjects() {
+  return [...this.projects].sort((a, b) => Number(b.order) - Number(a.order));
+}
 }

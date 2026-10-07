@@ -38,9 +38,9 @@ export class HomeComponent implements OnInit{
       icon: 'bi bi-file-earmark-code',
     },
     {
-      title: 'Fast Communication',
-      subtitle: 'Communicates effectively and promptly with team members and clients.',
-      icon: 'bi bi-chat-dots',
+      title: 'AI Assisted Development',
+      subtitle: 'Leverages AI tools to enhance development efficiency and code quality.',
+      icon: 'bi bi-robot',
     },
   ]
 

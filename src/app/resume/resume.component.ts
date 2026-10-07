@@ -15,8 +15,8 @@ export class ResumeComponent {
   DownloadFile() {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', '../../assets/resume.pdf');
-    link.setAttribute('download', 'resume.pdf');
+    link.setAttribute('href', '../../assets/Adam_Jaspher_L_Pacifico_CV_2026.pdf');
+    link.setAttribute('download', 'adam_pacifico_resume_2026.pdf');
     link.click();
     link.remove();
   }
